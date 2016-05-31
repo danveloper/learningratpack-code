@@ -1,0 +1,1 @@
+Note that this project is not intended to work, because the async operations are not supervised by Ratpack's execution. The code contained herein is meant to demonstrate the complexities of async programming without the fixtures provided by Ratpack.

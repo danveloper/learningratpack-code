@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Product Login Page</title>
+</head>
+<body>
+<h1>Please Login</h1>
+<form action="${model.callbackUrl}" method="POST">
+  <span>Username: </span> 
+  <input type="text" name="username" placeholder="username">
+  <br/>
+  <span>Password: </span> <input type="password" name="password">
+  <br/>
+  <input type="hidden" name="client_name" value="FormClient">
+  <input type="submit" value="Login">
+</form>
+</body>
+</html>

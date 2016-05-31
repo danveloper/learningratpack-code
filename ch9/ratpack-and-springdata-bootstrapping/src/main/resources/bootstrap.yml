@@ -1,0 +1,8 @@
+product:
+  products:
+    - name: Learning Ratpack
+      description: The Best Book on Ratpack so far
+      price: 42.99
+    - name: Programming Grails
+      description: Top 10 Book on Grails
+      price: 38.99

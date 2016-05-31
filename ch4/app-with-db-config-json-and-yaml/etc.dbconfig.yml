@@ -1,0 +1,2 @@
+database:
+  host: ratpack-mysql-0441.prod.internal

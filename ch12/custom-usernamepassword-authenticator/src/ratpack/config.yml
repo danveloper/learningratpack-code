@@ -1,0 +1,4 @@
+security:
+  basic:
+    userPassMap:
+      ratpack: 588a0b51a7bdc335a74d8afa902a77db0dac2281ebad3f5

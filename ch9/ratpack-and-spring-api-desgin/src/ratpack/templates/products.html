@@ -1,0 +1,9 @@
+<!doctype html>
+<html>
+<body>
+<% model.products.each { %>
+  <h1>${it.description}</h1>
+  <small><strong>${it.price}</strong></small>
+<% } %>
+</body>
+<html>

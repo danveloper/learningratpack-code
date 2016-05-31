@@ -1,0 +1,3 @@
+session:
+  sessionCookieName: "my_app_session"
+  secretKey: "!c$mB&aGkL112345"

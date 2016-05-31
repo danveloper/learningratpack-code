@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Learning Ratpack</title>
+<style>
+.row {
+  width: 100%;
+}
+.row > .col {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  padding-top: 5px;
+  position: relative;
+}
+.col.col-3 {
+  width: calc(33.333% - 16px);
+  margin-left: 12px;
+  border: 1px solid #000;
+  min-height: 150px;
+}
+.controls {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+}
+.controls > form {
+  display: inline-block;
+}
+</style>
+</head>
+<body>
+<h2>Welcome to Ratpack</h2>
+<form action="/resetView" method="post" style="margin-bottom: 10px">
+  <input type="submit" value="Reset View">
+</form>
+<div class="row">
+  <% 3.times { n -> %>
+    <div class="col col-3">
+    <% if (model.position == n) { %>
+      Learning Ratpack is fun!
+      <div class="controls">
+        <% if (n > 0) { %>
+        <form action="/updatePosition" method="post">
+          <input type="hidden" name="next_pos" value="${model.position-1}">
+          <input type="submit" value="&larr; Move">
+        </form>
+        <% } %>
+        <% if (n < 2) { %>
+        <form action="/updatePosition" method="post">
+          <input type="hidden" name="next_pos" value="${model.position+1}">
+          <input type="submit" value="Move &rarr;">
+        </form>
+        <% } %>
+      </div>
+    <% } %>
+    </div>
+  <% } %>
+</div>
+</body>
+</html>
